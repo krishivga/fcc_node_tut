@@ -2,5 +2,6 @@
 
 const names = require(`./3-names`)
 const sayHi = require(`./4-utils`)
-console.log(names)
-console.logI(sayHi)
+
+sayHi(names.john)
+sayHi(names.peter)

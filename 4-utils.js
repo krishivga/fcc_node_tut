@@ -5,6 +5,4 @@ const sayHi = (name) => {
     console.log(`Welcome ${name}!`)
 }
 
-console.log(module)
-
-module.exports = {sayHi}
+module.exports = sayHi 
