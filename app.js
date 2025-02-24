@@ -1,7 +1,7 @@
 // Provide structure to the application.
 
-const names = require(`./3-names`)
-const sayHi = require(`./4-utils`)
+const names = require(`./2-names`) 
+const sayHi = require(`./3-utils`)
 
 sayHi(names.john)
 sayHi(names.peter)
