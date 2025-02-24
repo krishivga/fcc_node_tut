@@ -1,11 +1,27 @@
-const {readFileSync, writeFileSync} = require('fs'); // accessing methods directly
+const {readFile, writeFile, write} = require('fs'); // accessing methods directly
 
-const firstFile = readFileSync('./content/first.txt', 'utf8')
-const secondFile = readFileSync('./content/second.txt', 'utf8')
+readFile("./content/first.txt",'utf8', (err, result) => {
+    if(err) {
+        console.log(err)
+        return
+    }
+    const firstFile = result;
+    readFile("./content/second.txt",'utf8', (err, result) => {
+        if(err) {
+            console.log(err)
+            return
+        }
+        const secondFile = result;
+        writeFile('./content/fs-async.txt',
+            `Here is the result: ${firstFile}, ${secondFile}`,
+            (err, result) => {
+                if(err) {
+                    console.log(err)
+                    return
+                }
+                console.log(result)
+            }
+        )
+    })
+})
 
-console.log(firstFile, secondFile)
-
-writeFileSync(
-    "./content/subfolder/creation.txt",
-    `Here is the result: ${firstFile}, ${secondFile}`
-)

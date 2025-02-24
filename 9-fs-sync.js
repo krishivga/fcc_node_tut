@@ -6,6 +6,6 @@ const secondFile = readFileSync('./content/second.txt', 'utf8')
 console.log(firstFile, secondFile)
 
 writeFileSync(
-    "./content/subfolder/creation.txt",
+    "./content/subfolder/fs-sync.txt",
     `Here is the result: ${firstFile}, ${secondFile}`
 )
