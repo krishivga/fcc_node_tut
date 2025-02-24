@@ -1,10 +1,8 @@
-// Provide structure to the application.
+const os = require('os')
 
-const names = require(`./2-names`) 
-const sayHi = require(`./3-utils`)
-const data = require(`./4-alternative-flavour`)
+//info about current user
+const user = os.userInfo()
 
-console.log(data)
+console.log(user);
 
-sayHi(names.john)
-sayHi(names.peter)
+//module returns system uptime in seconds
