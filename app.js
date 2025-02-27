@@ -11,3 +11,11 @@
 // package.json - the manifest file (contains all important info about your package)
 // npm init - step by step package initialisation
 // npm init -y - everything default
+
+const _ = require('lodash')
+
+const items = [1, [2, [3, [4]]]]
+
+const newItems = _.flattenDeep(items)
+
+console.log(newItems)
