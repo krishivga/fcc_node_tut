@@ -1,20 +1,13 @@
-const http = require('http');
+// npm - global command for everything npm
+// npm --version - shows the version
 
-const server = http.createServer((request, response) => {
-    if(request.url === "/"){
-        response.end("Welcome to my humble server")
-    } 
-    if(request.url === "/about"){
-        response.end("Here is what we are ABOUT!")
-    }
-    response.end(`
-        <h1>Oops!</h1>
-        <p>This page doesn't exist!</p>
-        <a href="/">Go back home</a>
-        `)
+// local dependency - stuff you only wanna use this project
+// npm install packagename OR npm i package - installs a package
 
-    // response.write("Welcome to my humble server");
-    // response.end();
-})
+// global dependency - can be used in any project
+// npm install -g packagename - installs a package globally
+// sudo npm install -g packagename - installs globally for macos
 
-server.listen(3000)
+// package.json - the manifest file (contains all important info about your package)
+// npm init - step by step package initialisation
+// npm init -y - everything default
