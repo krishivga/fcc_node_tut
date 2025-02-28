@@ -1,3 +1,4 @@
+const { error } = require('console');
 const { readFile } = require('fs');
 
 const getText = (path) => {
@@ -12,3 +13,4 @@ const getText = (path) => {
     })
 }
 
+getText("./content/first.txt").then((result) => console.log(result)).catch((error) => console.log(error))
