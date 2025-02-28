@@ -5,6 +5,12 @@ const server = http.createServer((request, response) => {
         response.end("This is the homepage.")
     }
     if(request.url === '/about'){
+        // Example of blocking code
+        for (let i = 0; i < 1000; i++){
+            for (let j = 0; j < 10000; j++){
+                console.log(`${i}, ${j}`)
+            }
+        }
         response.end("This is the about page.")
     }
     response.end("Error Page")
